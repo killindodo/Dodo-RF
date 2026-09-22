@@ -3,14 +3,15 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Platform: ESP32](https://img.shields.io/badge/Platform-ESP32-blue.svg)](https://www.espressif.com/)
 [![Radio: CC1101](https://img.shields.io/badge/Radio-CC1101-red.svg)](https://www.ti.com/product/CC1101)
-[![Android Companion APK](https://img.shields.io/badge/Companion%20App-Download%20APK-00FF66?style=flat&logo=android&logoColor=black)](release/Dodo-RF-Companion.apk?raw=true)
+[![Android Companion APK](https://img.shields.io/badge/Companion%20App-Download%20APK-00FF66?style=flat&logo=android&logoColor=black)](https://github.com/killindodo/Dodo-RF/releases/download/v1.0.0/Dodo-RF-Companion.apk)
+[![Latest Release](https://img.shields.io/github/v/release/killindodo/Dodo-RF?color=00E5FF)](https://github.com/killindodo/Dodo-RF/releases/latest)
 
 **Dodo-RF** is a fully standalone, open-source Sub-GHz RF analysis, capture, and replay platform built using an **ESP32** microcontroller and a **CC1101** transceiver module. 
 
 Featuring an embedded, cyberpunk-styled Web UI served directly from internal flash memory (`PROGMEM`), Dodo-RF creates its own Wi-Fi Access Point so you can scan, stage, store, and retransmit fixed-code RF signals from any browser or smartphone without external internet or software dependencies.
 
-> 📲 **Instant Android Install:** Download the pre-built companion APK directly without building from source:  
-> **👉 [Download Dodo-RF-Companion.apk (v1.0.0)](release/Dodo-RF-Companion.apk?raw=true)** (~6.3 MB)
+> 📲 **Instant Android Install:** Download the pre-built companion APK directly:  
+> **👉 [Download Dodo-RF-Companion.apk (v1.0.0)](https://github.com/killindodo/Dodo-RF/releases/download/v1.0.0/Dodo-RF-Companion.apk)** (~6.5 MB)
 
 ---
 
