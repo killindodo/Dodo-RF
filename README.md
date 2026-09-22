@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="docs/icon.png" width="128" height="128" alt="Dodo-RF App Icon" /><br>
+  <b>Dodo-RF</b> — Multi-Band Sub-GHz Transceiver &amp; Replicator
+</p>
+
 # 🦤 Dodo-RF: Multi-Band Sub-GHz Transceiver Dashboard & Replicator
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
