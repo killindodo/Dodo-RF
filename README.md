@@ -3,10 +3,14 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Platform: ESP32](https://img.shields.io/badge/Platform-ESP32-blue.svg)](https://www.espressif.com/)
 [![Radio: CC1101](https://img.shields.io/badge/Radio-CC1101-red.svg)](https://www.ti.com/product/CC1101)
+[![Android Companion APK](https://img.shields.io/badge/Companion%20App-Download%20APK-00FF66?style=flat&logo=android&logoColor=black)](release/Dodo-RF-Companion.apk?raw=true)
 
 **Dodo-RF** is a fully standalone, open-source Sub-GHz RF analysis, capture, and replay platform built using an **ESP32** microcontroller and a **CC1101** transceiver module. 
 
 Featuring an embedded, cyberpunk-styled Web UI served directly from internal flash memory (`PROGMEM`), Dodo-RF creates its own Wi-Fi Access Point so you can scan, stage, store, and retransmit fixed-code RF signals from any browser or smartphone without external internet or software dependencies.
+
+> 📲 **Instant Android Install:** Download the pre-built companion APK directly without building from source:  
+> **👉 [Download Dodo-RF-Companion.apk (v1.0.0)](release/Dodo-RF-Companion.apk?raw=true)** (~6.3 MB)
 
 ---
 
@@ -111,13 +115,21 @@ A native Android companion app is located in `android-companion/`, designed spec
 * **Remote Vault:** Store, organize, label, and replay captured remotes with 1 tap.
 * **Database Backup & Restore:** Export and import remotes directly as JSON.
 
-### Building & Sideloading
-```bash
-cd android-companion
-./gradlew assembleDebug
-# Install directly via adb:
-adb install -r app/build/outputs/apk/debug/app-debug.apk
-```
+### 📥 Installation
+* **Option A (Direct Download - Recommended):**  
+  Download [**`Dodo-RF-Companion.apk`**](release/Dodo-RF-Companion.apk?raw=true) directly to your Android device and install it (requires *Install Unknown Apps* enabled in Android Settings).
+
+* **Option B (Sideload via ADB):**  
+  ```bash
+  adb install -r release/Dodo-RF-Companion.apk
+  ```
+
+* **Option C (Build from Source):**  
+  ```bash
+  cd android-companion
+  ./gradlew assembleDebug
+  adb install -r app/build/outputs/apk/debug/app-debug.apk
+  ```
 
 ---
 
