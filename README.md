@@ -108,6 +108,12 @@ Click Upload (Ctrl + U / Cmd + U).
 
 A native Android companion app is located in `android-companion/`, designed specifically for field operations with direct hardware integration.
 
+### 📸 App Interface Preview
+
+| Live Sniffer HUD | Stored Remote Vault | Configuration & Telemetry |
+| :---: | :---: | :---: |
+| <img src="docs/screenshots/app_sniffer.jpg" width="260" alt="Live Sniffer HUD" /> | <img src="docs/screenshots/app_vault.jpg" width="260" alt="Stored Remote Vault" /> | <img src="docs/screenshots/app_settings.jpg" width="260" alt="Settings & Config" /> |
+
 ### Why Use the Native App over Browser?
 * **Zero-Friction Socket Binding:** Android typically forces requests over Cellular or drops packets when connected to an isolated AP without internet. The companion app binds all sockets directly to the ESP32 Wi-Fi interface using `ConnectivityManager.bindProcessToNetwork`.
 * **Acoustic & Haptic Telemetry:** Real-time feedback with electronic chirps via hardware `ToneGenerator` and tactile haptics on packet reception and replay.
@@ -118,7 +124,7 @@ A native Android companion app is located in `android-companion/`, designed spec
 
 ### 📥 Installation
 * **Option A (Direct Download - Recommended):**  
-  Download [**`Dodo-RF-Companion.apk`**](release/Dodo-RF-Companion.apk?raw=true) directly to your Android device and install it (requires *Install Unknown Apps* enabled in Android Settings).
+  Download [**`Dodo-RF-Companion.apk` (v1.0.0)**](https://github.com/killindodo/Dodo-RF/releases/download/v1.0.0/Dodo-RF-Companion.apk) directly to your Android device and install it (requires *Install Unknown Apps* enabled in Android Settings).
 
 * **Option B (Sideload via ADB):**  
   ```bash
