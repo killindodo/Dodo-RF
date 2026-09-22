@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Dodo-RF Companion</string>
+    <string name="app_tagline">Sub-GHz Transceiver Dashboard</string>
+    <string name="default_ip">192.168.4.1</string>
+    <string name="default_ssid">Dodo-RF-Replicator</string>
+    <string name="default_pass">esp32rf2026</string>
+</resources>

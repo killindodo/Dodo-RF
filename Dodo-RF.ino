@@ -520,6 +520,9 @@ void handleStatus() {
     o["code"]      = pendingQueue[i].rawCode;
     o["frequency"] = pendingQueue[i].frequency;
     o["timestamp"] = pendingQueue[i].timestamp;
+    o["bits"]      = pendingQueue[i].bitLength;
+    o["protocol"]  = pendingQueue[i].protocol;
+    o["pulse"]     = pendingQueue[i].pulseLength;
   }
   pendingCount = 0;
 
@@ -642,6 +645,52 @@ void handleReplay() {
   server.send(404, "application/json", "{\"error\":\"signal not found\"}");
 }
 
+void handleDelete() {
+  if (!server.hasArg("plain")) {
+    server.send(400, "application/json", "{\"error\":\"missing body\"}");
+    return;
+  }
+
+  JsonDocument inDoc;
+  DeserializationError err = deserializeJson(inDoc, server.arg("plain"));
+  if (err || !inDoc["id"].is<int>()) {
+    server.send(400, "application/json", "{\"error\":\"invalid payload\"}");
+    return;
+  }
+  int id = inDoc["id"].as<int>();
+
+  JsonDocument doc;
+  deserializeJson(doc, loadSignalsJson());
+  JsonArray arr = doc.as<JsonArray>();
+  if (arr.isNull()) {
+    server.send(404, "application/json", "{\"error\":\"signal not found\"}");
+    return;
+  }
+
+  JsonDocument newDoc;
+  JsonArray newArr = newDoc.to<JsonArray>();
+  bool found = false;
+
+  for (JsonObject o : arr) {
+    if (o["id"].as<int>() == id) {
+      found = true;
+    } else {
+      newArr.add(o);
+    }
+  }
+
+  if (!found) {
+    server.send(404, "application/json", "{\"error\":\"signal not found\"}");
+    return;
+  }
+
+  String out;
+  serializeJson(newDoc, out);
+  saveSignalsJson(out);
+
+  server.send(200, "application/json", "{\"status\":\"deleted\",\"id\":" + String(id) + "}");
+}
+
 void handleImport() {
   if (!server.hasArg("plain")) {
     server.send(400, "application/json", "{\"error\":\"missing body\"}");
@@ -717,6 +766,7 @@ void setup() {
   server.on("/api/signals", HTTP_GET, handleGetSignals);
   server.on("/api/save", HTTP_POST, handleSave);
   server.on("/api/replay", HTTP_POST, handleReplay);
+  server.on("/api/delete", HTTP_POST, handleDelete);
   server.on("/api/import", HTTP_POST, handleImport);
   server.onNotFound(handleNotFound);
 

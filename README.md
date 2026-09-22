@@ -17,6 +17,7 @@ Featuring an embedded, cyberpunk-styled Web UI served directly from internal fla
 - [Power Configurations](#-power-configurations)
 - [Software Dependencies](#-software-dependencies)
 - [Installation & Flashing](#-installation--flashing)
+- [Android Companion App](#-android-companion-app)
 - [Web Dashboard & Theming](#-web-dashboard--theming)
 - [Usage Workflow](#-usage-workflow)
 - [Protocol Compatibility](#-protocol-compatibility)
@@ -96,7 +97,31 @@ Set the Upload Speed to 921600 (or 115200 if flashing encounters timeouts).
 
 Click Upload (Ctrl + U / Cmd + U).
 
-🎨 Web Dashboard & Theming
+---
+
+## 📱 Android Companion App
+
+A native Android companion app is located in `android-companion/`, designed specifically for field operations with direct hardware integration.
+
+### Why Use the Native App over Browser?
+* **Zero-Friction Socket Binding:** Android typically forces requests over Cellular or drops packets when connected to an isolated AP without internet. The companion app binds all sockets directly to the ESP32 Wi-Fi interface using `ConnectivityManager.bindProcessToNetwork`.
+* **Acoustic & Haptic Telemetry:** Real-time feedback with electronic chirps via hardware `ToneGenerator` and tactile haptics on packet reception and replay.
+* **Instant CC1101 Frequency Switching:** Quick-tune across `315.00 MHz`, `433.92 MHz`, `868.30 MHz`, `915.00 MHz`, or custom MHz.
+* **Live Sniffer HUD:** Packet inspection cards showing frequency, raw hex code, bit-length, protocol ID, and pulse timing.
+* **Remote Vault:** Store, organize, label, and replay captured remotes with 1 tap.
+* **Database Backup & Restore:** Export and import remotes directly as JSON.
+
+### Building & Sideloading
+```bash
+cd android-companion
+./gradlew assembleDebug
+# Install directly via adb:
+adb install -r app/build/outputs/apk/debug/app-debug.apk
+```
+
+---
+
+## 🎨 Web Dashboard & Theming
 The user interface is optimized for mobile touchscreens and features a real-time console and live signal stager:
 
 Matrix Green (Default): Dark hacker aesthetic with glowing green indicators.

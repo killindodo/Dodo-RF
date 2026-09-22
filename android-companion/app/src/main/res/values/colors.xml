@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Backgrounds -->
+    <color name="bg_dark">#05070A</color>
+    <color name="bg_card">#0D131A</color>
+    <color name="bg_card_elevated">#131D26</color>
+    <color name="bg_input">#080C10</color>
+    <color name="border_cyan">#1B3B48</color>
+    <color name="border_green">#123824</color>
+    <color name="border_subtle">#1A2530</color>
+
+    <!-- Neon Accents -->
+    <color name="neon_green">#00FF66</color>
+    <color name="neon_green_dim">#3300FF66</color>
+    <color name="neon_cyan">#00E5FF</color>
+    <color name="neon_cyan_dim">#3300E5FF</color>
+    <color name="alert_red">#FF2A6D</color>
+    <color name="alert_red_dim">#33FF2A6D</color>
+    <color name="warn_amber">#FFB800</color>
+    <color name="warn_amber_dim">#33FFB800</color>
+
+    <!-- Text -->
+    <color name="text_primary">#E6F7FF</color>
+    <color name="text_secondary">#7A9EA8</color>
+    <color name="text_dim">#46606B</color>
+    <color name="text_green">#00FF66</color>
+    <color name="text_cyan">#00E5FF</color>
+    <color name="text_white">#FFFFFF</color>
+
+    <!-- Base Palette -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+</resources>

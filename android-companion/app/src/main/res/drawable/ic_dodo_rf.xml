@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Center Antenna Mast -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="@color/neon_green"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="2.5"
+        android:pathData="M24,20 L24,42 M16,42 L32,42" />
+    
+    <!-- Transmitter Top Node -->
+    <path
+        android:fillColor="@color/neon_green"
+        android:strokeColor="@color/neon_green"
+        android:strokeWidth="1"
+        android:pathData="M24,17 m-3,0 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0" />
+
+    <!-- Radio Waves Left Inner -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="@color/neon_cyan"
+        android:strokeLineCap="round"
+        android:strokeWidth="2.2"
+        android:pathData="M18,11 C15,14 15,20 18,23" />
+    
+    <!-- Radio Waves Right Inner -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="@color/neon_cyan"
+        android:strokeLineCap="round"
+        android:strokeWidth="2.2"
+        android:pathData="M30,11 C33,14 33,20 30,23" />
+
+    <!-- Radio Waves Left Outer -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="@color/neon_green"
+        android:strokeLineCap="round"
+        android:strokeWidth="2.2"
+        android:pathData="M12,6 C7,12 7,22 12,28" />
+
+    <!-- Radio Waves Right Outer -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="@color/neon_green"
+        android:strokeLineCap="round"
+        android:strokeWidth="2.2"
+        android:pathData="M36,6 C41,12 41,22 36,28" />
+</vector>
